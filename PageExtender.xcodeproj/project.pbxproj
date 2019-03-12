@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A19F25B217A7D9A000D503B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19F25A217A7D9A000D503B /* AppDelegate.swift */; };
+		4A19F25D217A7D9B000D503B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A19F25C217A7D9B000D503B /* Assets.xcassets */; };
+		4A19F260217A7D9B000D503B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A19F25E217A7D9B000D503B /* MainMenu.xib */; };
+		4A19F26F217A7DA7000D503B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A19F26E217A7DA7000D503B /* Cocoa.framework */; };
+		4A19F272217A7DA7000D503B /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A19F271217A7DA7000D503B /* SafariExtensionHandler.swift */; };
+		4A19F27A217A7DA7000D503B /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 4A19F279217A7DA7000D503B /* script.js */; };
+		4A19F280217A7DA7000D503B /* PageExtender Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4A19F26C217A7DA7000D503B /* PageExtender Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4A206499217E446C0057CF1B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A206498217E446C0057CF1B /* Config.swift */; };
+		4A20649A217E446C0057CF1B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A206498217E446C0057CF1B /* Config.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A19F27E217A7DA7000D503B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A19F24F217A7D9A000D503B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A19F26B217A7DA7000D503B;
+			remoteInfo = "Safari Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4A19F284217A7DA7000D503B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4A19F280217A7DA7000D503B /* PageExtender Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4A19F257217A7D9A000D503B /* PageExtender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageExtender.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A19F25A217A7D9A000D503B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4A19F25C217A7D9B000D503B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4A19F25F217A7D9B000D503B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4A19F261217A7D9B000D503B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A19F262217A7D9B000D503B /* Entitlements.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Entitlements.entitlements; sourceTree = "<group>"; };
+		4A19F26C217A7DA7000D503B /* PageExtender Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PageExtender Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A19F26E217A7DA7000D503B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4A19F271217A7DA7000D503B /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
+		4A19F278217A7DA7000D503B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A19F279217A7DA7000D503B /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		4A1BF74D2237517A00998148 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		4A1BF74E2237518400998148 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		4A206498217E446C0057CF1B /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		4A24259C2190C73300FF55AB /* Host.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Host.xcconfig; sourceTree = "<group>"; };
+		4A24259D2190C74800FF55AB /* Extension.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Extension.xcconfig; sourceTree = "<group>"; };
+		4A24259F2190C75900FF55AB /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		4AB939792258E91E0074EA61 /* Version.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Version.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A19F254217A7D9A000D503B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A19F269217A7DA7000D503B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A19F26F217A7DA7000D503B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A19F24E217A7D9A000D503B = {
+			isa = PBXGroup;
+			children = (
+				4A1BF74F223758DE00998148 /* Source */,
+				4A19F26D217A7DA7000D503B /* Frameworks */,
+				4A19F258217A7D9A000D503B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4A19F258217A7D9A000D503B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A19F257217A7D9A000D503B /* PageExtender.app */,
+				4A19F26C217A7DA7000D503B /* PageExtender Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A19F259217A7D9A000D503B /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				4A19F261217A7D9B000D503B /* Info.plist */,
+				4A19F25A217A7D9A000D503B /* AppDelegate.swift */,
+				4A19F25C217A7D9B000D503B /* Assets.xcassets */,
+				4A24259C2190C73300FF55AB /* Host.xcconfig */,
+				4A19F25E217A7D9B000D503B /* MainMenu.xib */,
+			);
+			path = Host;
+			sourceTree = "<group>";
+		};
+		4A19F26D217A7DA7000D503B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A19F26E217A7DA7000D503B /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A19F270217A7DA7000D503B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4A19F279217A7DA7000D503B /* script.js */,
+				4A19F278217A7DA7000D503B /* Info.plist */,
+				4A19F271217A7DA7000D503B /* SafariExtensionHandler.swift */,
+				4A24259D2190C74800FF55AB /* Extension.xcconfig */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4A1BF74F223758DE00998148 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				4A206497217E44590057CF1B /* Shared */,
+				4A19F259217A7D9A000D503B /* Host */,
+				4A19F270217A7DA7000D503B /* Extension */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		4A206497217E44590057CF1B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4A19F262217A7D9B000D503B /* Entitlements.entitlements */,
+				4A206498217E446C0057CF1B /* Config.swift */,
+				4A24259F2190C75900FF55AB /* Base.xcconfig */,
+				4A1BF74D2237517A00998148 /* Debug.xcconfig */,
+				4A1BF74E2237518400998148 /* Release.xcconfig */,
+				4AB939792258E91E0074EA61 /* Version.xcconfig */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A19F256217A7D9A000D503B /* Host */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A19F265217A7D9B000D503B /* Build configuration list for PBXNativeTarget "Host" */;
+			buildPhases = (
+				4A19F253217A7D9A000D503B /* Sources */,
+				4A19F254217A7D9A000D503B /* Frameworks */,
+				4A19F255217A7D9A000D503B /* Resources */,
+				4A19F284217A7DA7000D503B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A19F27F217A7DA7000D503B /* PBXTargetDependency */,
+			);
+			name = Host;
+			productName = "Page Extender";
+			productReference = 4A19F257217A7D9A000D503B /* PageExtender.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4A19F26B217A7DA7000D503B /* Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A19F281217A7DA7000D503B /* Build configuration list for PBXNativeTarget "Extension" */;
+			buildPhases = (
+				4A19F268217A7DA7000D503B /* Sources */,
+				4A19F269217A7DA7000D503B /* Frameworks */,
+				4A19F26A217A7DA7000D503B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Extension;
+			productName = "Safari Extension";
+			productReference = 4A19F26C217A7DA7000D503B /* PageExtender Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A19F24F217A7D9A000D503B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Philipe Fatio";
+				TargetAttributes = {
+					4A19F256217A7D9A000D503B = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 1;
+							};
+						};
+					};
+					4A19F26B217A7DA7000D503B = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 4A19F252217A7D9A000D503B /* Build configuration list for PBXProject "PageExtender" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4A19F24E217A7D9A000D503B;
+			productRefGroup = 4A19F258217A7D9A000D503B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A19F256217A7D9A000D503B /* Host */,
+				4A19F26B217A7DA7000D503B /* Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A19F255217A7D9A000D503B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A19F25D217A7D9B000D503B /* Assets.xcassets in Resources */,
+				4A19F260217A7D9B000D503B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A19F26A217A7DA7000D503B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A19F27A217A7DA7000D503B /* script.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A19F253217A7D9A000D503B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A19F25B217A7D9A000D503B /* AppDelegate.swift in Sources */,
+				4A206499217E446C0057CF1B /* Config.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A19F268217A7DA7000D503B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A19F272217A7DA7000D503B /* SafariExtensionHandler.swift in Sources */,
+				4A20649A217E446C0057CF1B /* Config.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A19F27F217A7DA7000D503B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A19F26B217A7DA7000D503B /* Extension */;
+			targetProxy = 4A19F27E217A7DA7000D503B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4A19F25E217A7D9B000D503B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A19F25F217A7D9B000D503B /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4A19F263217A7D9B000D503B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A1BF74D2237517A00998148 /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		4A19F264217A7D9B000D503B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A1BF74E2237518400998148 /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		4A19F266217A7D9B000D503B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A24259C2190C73300FF55AB /* Host.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		4A19F267217A7D9B000D503B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A24259C2190C73300FF55AB /* Host.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		4A19F282217A7DA7000D503B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A24259D2190C74800FF55AB /* Extension.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		4A19F283217A7DA7000D503B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A24259D2190C74800FF55AB /* Extension.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4A19F252217A7D9A000D503B /* Build configuration list for PBXProject "PageExtender" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A19F263217A7D9B000D503B /* Debug */,
+				4A19F264217A7D9B000D503B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A19F265217A7D9B000D503B /* Build configuration list for PBXNativeTarget "Host" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A19F266217A7D9B000D503B /* Debug */,
+				4A19F267217A7D9B000D503B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A19F281217A7DA7000D503B /* Build configuration list for PBXNativeTarget "Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A19F282217A7DA7000D503B /* Debug */,
+				4A19F283217A7DA7000D503B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A19F24F217A7D9A000D503B /* Project object */;
+}
