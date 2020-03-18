@@ -10,7 +10,7 @@ safari.self.addEventListener("message", ({name, message}) => {
 const messageHandlers = {
   onload: message => {
     Object.entries(message).forEach(([fileType, files]) => {
-      Object.entries(files).forEach(([fileName, content]) => {
+      files.forEach(([fileName, content]) => {
         console.log(`Injecting ${fileName}`)
         fileTypeHandlers[fileType](content)
       })
