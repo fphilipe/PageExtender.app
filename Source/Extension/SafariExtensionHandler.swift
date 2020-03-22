@@ -2,8 +2,13 @@ import os
 import SafariServices
 
 private typealias Type = String
-private typealias Name = String
-private typealias Content = String
+
+private struct File {
+    let name: String
+    let content: String
+
+    func toJSRepresentation() -> [String] { [name, content] }
+}
 
 class SafariExtensionHandler: SFSafariExtensionHandler {
     private lazy var localConfig = Config(userDefaults: UserDefaults.standard, secure: true)
@@ -19,18 +24,20 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 
             let basenames = fileBasenames(forHost: host)
 
-            let keysWithValues = Config.FileType.allCases.map { fileType -> (Type, [Name: Content]) in
-                let files: [Name: Content]
+            let keysWithValues = Config.FileType.allCases.map { fileType -> (Type, [File]) in
+                let files: [File]
                 if let url = self.localConfig.url(for: fileType) {
                     files = loadFiles(from: url, basenames: basenames, extension: fileType.rawValue)
                 } else {
-                    files = [:]
+                    files = []
                 }
 
                 return (fileType.rawValue, files)
             }
 
-            let data = Dictionary(uniqueKeysWithValues: keysWithValues)
+            let data = Dictionary(uniqueKeysWithValues: keysWithValues).mapValues { files in
+                files.map { $0.toJSRepresentation() }
+            }
             page.dispatchMessageToScript(withName: "onload", userInfo: data)
         }
     }
@@ -63,16 +70,14 @@ private func fileBasenames(forHost host: String) -> [String] {
     return baseNames
 }
 
-private func loadFiles(from dir: URL, basenames: [String], extension: String) -> [Name: Content] {
+private func loadFiles(from dir: URL, basenames: [String], extension: String) -> [File] {
     let val = dir.startAccessingSecurityScopedResource()
     defer { dir.stopAccessingSecurityScopedResource() }
 
-    let keysWithValues = basenames.compactMap { basename -> (Name, Content)? in
+    return basenames.compactMap { basename -> File? in
         let fileName = "\(basename).\(`extension`)"
         let url = dir.appendingPathComponent(fileName)
 
-        return try? (fileName, String(contentsOf: url))
+        return try? File(name: fileName, content: String(contentsOf: url))
     }
-
-    return Dictionary(uniqueKeysWithValues: keysWithValues)
 }
