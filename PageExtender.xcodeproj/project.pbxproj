@@ -200,11 +200,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Philipe Fatio";
 				TargetAttributes = {
 					4A19F256217A7D9A000D503B = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1130;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
 								enabled = 1;
@@ -216,6 +217,7 @@
 					};
 					4A19F26B217A7DA7000D503B = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1130;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
 								enabled = 1;
