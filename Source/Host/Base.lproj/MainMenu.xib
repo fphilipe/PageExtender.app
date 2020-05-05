@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -75,60 +76,9 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="File" id="bib-Uj-vzu">
                         <items>
-                            <menuItem title="New" keyEquivalent="n" id="Was-JA-tGl">
-                                <connections>
-                                    <action selector="newDocument:" target="-1" id="4Si-XN-c54"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
-                                <connections>
-                                    <action selector="openDocument:" target="-1" id="bVn-NM-KNZ"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Open Recent" id="tXI-mr-wws">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Open Recent" systemMenu="recentDocuments" id="oas-Oc-fiZ">
-                                    <items>
-                                        <menuItem title="Clear Menu" id="vNY-rz-j42">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="clearRecentDocuments:" target="-1" id="Daa-9d-B3U"/>
-                                            </connections>
-                                        </menuItem>
-                                    </items>
-                                </menu>
-                            </menuItem>
-                            <menuItem isSeparatorItem="YES" id="m54-Is-iLE"/>
                             <menuItem title="Close" keyEquivalent="w" id="DVo-aG-piG">
                                 <connections>
                                     <action selector="performClose:" target="-1" id="HmO-Ls-i7Q"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Save…" keyEquivalent="s" id="pxx-59-PXV">
-                                <connections>
-                                    <action selector="saveDocument:" target="-1" id="teZ-XB-qJY"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Save As…" keyEquivalent="S" id="Bw7-FT-i3A">
-                                <connections>
-                                    <action selector="saveDocumentAs:" target="-1" id="mDf-zr-I0C"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Revert to Saved" keyEquivalent="r" id="KaW-ft-85H">
-                                <connections>
-                                    <action selector="revertDocumentToSaved:" target="-1" id="iJ3-Pv-kwq"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem isSeparatorItem="YES" id="aJh-i4-bef"/>
-                            <menuItem title="Page Setup…" keyEquivalent="P" id="qIS-W8-SiK">
-                                <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
-                                <connections>
-                                    <action selector="runPageLayout:" target="-1" id="Din-rz-gC5"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Print…" keyEquivalent="p" id="aTl-1u-JFS">
-                                <connections>
-                                    <action selector="print:" target="-1" id="qaZ-4w-aoO"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -373,7 +323,7 @@
                             <menuItem title="Show Sidebar" keyEquivalent="s" id="kIP-vf-haE">
                                 <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                 <connections>
-                                    <action selector="toggleSourceList:" target="-1" id="iwa-gc-5KM"/>
+                                    <action selector="toggleSidebar:" target="-1" id="iwa-gc-5KM"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
@@ -416,19 +366,20 @@
                         <items>
                             <menuItem title="PageExtender Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                 <connections>
-                                    <action selector="showHelp:" target="-1" id="y7X-2Q-9no"/>
+                                    <action selector="showHelp:" target="Voe-Tx-rLC" id="4hQ-IS-KwW"/>
                                 </connections>
                             </menuItem>
                         </items>
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="139" y="257"/>
         </menu>
         <window title="PageExtender" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="475" y="388" width="530" height="308"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
-            <view key="contentView" id="EiT-Mj-1SZ">
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <view key="contentView" misplaced="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="530" height="333"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
@@ -457,7 +408,7 @@
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oUt-Fc-xnM">
                                         <rect key="frame" x="14" y="2" width="134" height="14"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Safari Extension Enabled" id="vv1-zt-M8V">
-                                            <font key="font" metaFont="smallSystem"/>
+                                            <font key="font" metaFont="message" size="11"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -494,7 +445,7 @@
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iZt-Ib-MUA">
                                         <rect key="frame" x="14" y="2" width="138" height="14"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Safari Extension Disabled" id="jac-CY-spK">
-                                            <font key="font" metaFont="smallSystem"/>
+                                            <font key="font" metaFont="message" size="11"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -503,7 +454,7 @@
                                         <rect key="frame" x="153" y="-6" width="154" height="27"/>
                                         <buttonCell key="cell" type="push" title="Open Safari Preferences" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zP9-HR-YhD">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="smallSystem"/>
+                                            <font key="font" metaFont="message" size="11"/>
                                         </buttonCell>
                                         <connections>
                                             <action selector="showSafariPreferences:" target="Voe-Tx-rLC" id="q9g-2Q-ZiH"/>
@@ -531,7 +482,7 @@
                                             <rect key="frame" x="16" y="12" width="458" height="79"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NGf-fD-Rw5">
-                                                    <rect key="frame" x="-2" y="62" width="227" height="17"/>
+                                                    <rect key="frame" x="-2" y="63" width="227" height="16"/>
                                                     <textFieldCell key="cell" title="Look for files in the following folders:" id="mw4-KC-nWS">
                                                         <font key="font" usesAppearanceFont="YES"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -539,13 +490,13 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="250" verticalStackHuggingPriority="1000" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gZN-cz-ytt">
-                                                    <rect key="frame" x="0.0" y="0.0" width="458" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="458" height="51"/>
                                                     <subviews>
                                                         <stackView distribution="fill" orientation="horizontal" alignment="firstBaseline" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Sf-E9-KE5">
-                                                            <rect key="frame" x="139" y="29" width="180" height="21"/>
+                                                            <rect key="frame" x="139" y="29" width="180" height="22"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="s3H-xd-JnR">
-                                                                    <rect key="frame" x="-2" y="3" width="65" height="17"/>
+                                                                    <rect key="frame" x="-2" y="4" width="65" height="16"/>
                                                                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="CSS Files:" id="8tz-lV-Ryx">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -553,7 +504,7 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PWf-5N-KXa">
-                                                                    <rect key="frame" x="67" y="3" width="37" height="17"/>
+                                                                    <rect key="frame" x="67" y="4" width="37" height="16"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="Pxs-t5-5BA"/>
                                                                     </constraints>
@@ -564,7 +515,7 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <button horizontalHuggingPriority="1000" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="lFR-y8-kgL">
-                                                                    <rect key="frame" x="104" y="-7" width="82" height="32"/>
+                                                                    <rect key="frame" x="104" y="-6" width="82" height="32"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="70" placeholder="YES" id="5dv-Cd-JsE"/>
                                                                     </constraints>
@@ -592,7 +543,7 @@
                                                             <rect key="frame" x="139" y="0.0" width="180" height="21"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6wv-aB-Akp">
-                                                                    <rect key="frame" x="-2" y="3" width="65" height="17"/>
+                                                                    <rect key="frame" x="-2" y="3" width="65" height="16"/>
                                                                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="JS Files:" id="Nfp-Uu-bue">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -600,7 +551,7 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="flM-ER-T00">
-                                                                    <rect key="frame" x="67" y="3" width="37" height="17"/>
+                                                                    <rect key="frame" x="67" y="3" width="37" height="16"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingMiddle" title="Label" id="g3X-Zs-obz">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -672,15 +623,15 @@
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="1dd-iJ-sCm">
                                 <rect key="frame" x="-2" y="0.0" width="494" height="140"/>
                                 <textFieldCell key="cell" id="kpN-Ue-WMl">
-                                    <font key="font" metaFont="smallSystem"/>
-                                    <mutableString key="title">When visiting a page, e.g. https://en.wikipedia.org/wiki/Apple, the Safari extension will inject the following files into the page if they are present in the respective folders selected above:
+                                    <font key="font" metaFont="message" size="11"/>
+                                    <string key="title">When visiting a page, e.g. https://en.wikipedia.org/wiki/Apple, the Safari extension will inject the following files into the page if they are present in the respective folders selected above:
 
 	∙ default.css			∙ default.js
 	∙ org.css				∙ org.js
 	∙ wikipedia.org.css		∙ wikipedia.org.js
 	∙ en.wikipedia.org.css	∙ en.wikipedia.org.js
 
-Note that JS files are injected once the DOM is ready, i.e. once the DOMContentLoaded event has fired.</mutableString>
+Note that JS files are injected once the DOM is ready, i.e. once the DOMContentLoaded event has fired.</string>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>

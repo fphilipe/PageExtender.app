@@ -102,4 +102,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction private func showSafariPreferences(_: Any) {
         SFSafariApplication.showPreferencesForExtension(withIdentifier: extensionBundleID)
     }
+
+    @IBAction private func showHelp(_: Any) {
+        let url = URL(string: "https://phili.pe/posts/introducing-page-extender-for-safari/")!
+        NSWorkspace.shared.open(url)
+    }
 }
