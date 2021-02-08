@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.2.1-5
+
+- Rebuild with latest Xcode for arm (M1) support
+
 ## v1.2-4
 
 - Remove unused menu items after Apple rejected the app
