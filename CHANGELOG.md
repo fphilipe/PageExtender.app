@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v1.2-4
+
+- Remove unused menu items after Apple rejected the app
+
+## v1.1.1-3
+
+- Specify deployment target to support macOS 10.12
+
 ## v1.1-2
 
 - Load files in deterministic order ([@ernstwi](https://github.com/ernstwi))
