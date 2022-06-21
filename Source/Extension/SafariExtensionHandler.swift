@@ -19,10 +19,10 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 
         updateConfig()
 
-        page.getPropertiesWithCompletionHandler {
-            guard let host = $0?.url?.host else { return }
+        page.getPropertiesWithCompletionHandler { properties in
+            guard let properties = properties else { return }
 
-            let basenames = fileBasenames(forHost: host)
+            let basenames = fileBasenames(forHost: properties.url?.host)
 
             let keysWithValues = Config.FileType.allCases.map { fileType -> (Type, [File]) in
                 let files: [File]
@@ -58,7 +58,11 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     }
 }
 
-private func fileBasenames(forHost host: String) -> [String] {
+private func fileBasenames(forHost host: String?) -> [String] {
+    guard let host = host else {
+        return ["default", "blank"]
+    }
+
     let parts = host.split(separator: ".")
     var baseNames = [String]()
     for index in parts.startIndex ..< parts.endIndex {
