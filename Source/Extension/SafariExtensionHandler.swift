@@ -71,7 +71,7 @@ private func fileBasenames(forHost host: String) -> [String] {
 }
 
 private func loadFiles(from dir: URL, basenames: [String], extension: String) -> [File] {
-    let val = dir.startAccessingSecurityScopedResource()
+    _ = dir.startAccessingSecurityScopedResource()
     defer { dir.stopAccessingSecurityScopedResource() }
 
     return basenames.compactMap { basename -> File? in
